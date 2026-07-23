@@ -1,0 +1,35 @@
+# Python
+parser/.venv/
+parser/**/__pycache__/
+parser/**/*.egg-info/
+parser/.mypy_cache/
+parser/.ruff_cache/
+parser/.pytest_cache/
+*.pyc
+
+# Node / Next
+viewer/node_modules/
+viewer/.next/
+viewer/out/
+viewer/test-results/
+viewer/playwright-report/
+viewer/playwright/.cache/
+
+# Generated corpus (built in CI from files/*.pdf)
+viewer/public/data/pages/
+viewer/public/data/page-data/
+viewer/public/data/manifest.json
+viewer/public/data/report.json
+viewer/public/data/search-index.json
+viewer/public/data/components.json
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.log
+.env
+.env.*
+
+# graphify
+graphify-out/

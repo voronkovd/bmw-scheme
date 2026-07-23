@@ -1,0 +1,22 @@
+# Render.com static site (free alternative to Heroku).
+# Connect the GitHub repo in Render dashboard → New → Static Site,
+# or use Blueprint with this file.
+#
+# Dashboard settings if not using Blueprint:
+#   Build Command:  bash scripts/build-static.sh /bmw-scheme
+#   Publish Path:   viewer/out
+
+services:
+  - type: web
+    name: bmw-scheme
+    runtime: static
+    buildCommand: bash scripts/build-static.sh ""
+    staticPublishPath: viewer/out
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=300
+      - path: /data/*
+        name: Cache-Control
+        value: public, max-age=86400

@@ -1,0 +1,4 @@
+# Keep the data directory in git; generated files are ignored.
+*
+!.gitignore
+!.gitkeep
